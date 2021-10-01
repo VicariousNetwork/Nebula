@@ -66,7 +66,7 @@ export interface ServerMeta {
         version: Server['version']
         name: Server['name']
         description: Server['description']
-        icon: 'https://launcher.vicariousnetwork.com/repo/icons/CHANGE_ME.png'
+        icon: Server['icon']
         address: Server['address']
         discord?: Server['discord']
         mainServer: Server['mainServer']
