@@ -26,9 +26,9 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             description: `${id} Running Minecraft ${version}`,
             address: 'localhost:25565',
             discord: {
-                shortId: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageText: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageKey: '<FILL IN OR REMOVE DISCORD OBJECT>'
+                shortId: '<PETER INSERT A MODPACK NAME HERE>',
+                largeImageText: 'CHANGE_ME.vicariousnetwork.com',
+                largeImageKey: 'CHANGE_ME'
             },
             mainServer: false,
             serverCode: '',
