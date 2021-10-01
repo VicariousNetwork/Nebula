@@ -1,6 +1,6 @@
 import StreamZip from 'node-stream-zip'
 import { Stats } from 'fs-extra'
-import { Type } from 'helios-distribution-types'
+import { Type } from 'hl-distribution-types-sir'
 import { join } from 'path'
 import { URL } from 'url'
 import { capitalize } from '../../../util/stringutils'

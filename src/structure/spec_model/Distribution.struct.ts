@@ -1,5 +1,5 @@
 import { mkdirs, writeFile, readFile, pathExists } from 'fs-extra'
-import { Distribution } from 'helios-distribution-types'
+import { Distribution } from 'hl-distribution-types-sir'
 import { SpecModelStructure } from './SpecModelStructure'
 import { ServerStructure } from './Server.struct'
 import { join, resolve } from 'path'

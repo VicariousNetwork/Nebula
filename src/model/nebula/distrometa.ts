@@ -1,4 +1,4 @@
-import { Distribution } from 'helios-distribution-types'
+import { Distribution } from 'hl-distribution-types-sir'
 
 export interface DistroMeta {
 

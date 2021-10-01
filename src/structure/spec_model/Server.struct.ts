@@ -1,5 +1,5 @@
 import { lstat, mkdirs, pathExists, readdir, readFile, writeFile } from 'fs-extra'
-import { Server, Module } from 'helios-distribution-types'
+import { Server, Module } from 'hl-distribution-types-sir'
 import { dirname, join, resolve as resolvePath } from 'path'
 import { URL } from 'url'
 import { VersionSegmentedRegistry } from '../../util/VersionSegmentedRegistry'

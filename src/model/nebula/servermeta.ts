@@ -1,4 +1,4 @@
-import { Server } from 'helios-distribution-types'
+import { Server } from 'hl-distribution-types-sir'
 
 export interface UntrackedFilesOption {
     /**

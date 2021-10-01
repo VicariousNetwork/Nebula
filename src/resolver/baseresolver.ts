@@ -1,4 +1,4 @@
-import { Module } from 'helios-distribution-types'
+import { Module } from 'hl-distribution-types-sir'
 import { VersionSegmented } from '../util/VersionSegmented'
 import { Resolver } from './resolver'
 import { MinecraftVersion } from '../util/MinecraftVersion'
