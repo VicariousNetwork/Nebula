@@ -182,6 +182,7 @@ export class ServerStructure extends BaseModelStructure<Server> {
                     minecraftVersion: match[2],
                     ...(serverMeta.meta.discord ? {discord: serverMeta.meta.discord} : {}),
                     mainServer: serverMeta.meta.mainServer,
+                    serverCode: serverMeta.meta.serverCode,
                     autoconnect: serverMeta.meta.autoconnect,
                     modules
                 })
