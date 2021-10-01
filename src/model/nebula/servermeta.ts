@@ -24,6 +24,7 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             version: '1.0.0',
             name: `${id} (Minecraft ${version})`,
             description: `${id} Running Minecraft ${version}`,
+            icon: 'https://launcher.vicariousnetwork.com/repo/icons/CHANGE_ME.png',
             address: 'localhost:25565',
             discord: {
                 shortId: '<PETER INSERT A MODPACK NAME HERE>',
@@ -65,6 +66,7 @@ export interface ServerMeta {
         version: Server['version']
         name: Server['name']
         description: Server['description']
+        icon: 'https://launcher.vicariousnetwork.com/repo/icons/CHANGE_ME.png'
         address: Server['address']
         discord?: Server['discord']
         mainServer: Server['mainServer']
