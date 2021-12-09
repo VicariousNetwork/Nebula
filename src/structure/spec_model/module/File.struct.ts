@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Stats } from 'fs'
-import { Type, Module } from 'helios-distribution-types'
+import { Type, Module } from 'hl-distribution-types-sir'
 import { URL } from 'url'
 import { ModuleStructure } from './Module.struct'
 import { readdir, stat } from 'fs-extra'

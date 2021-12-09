@@ -1,5 +1,5 @@
 import { ModuleStructure, ModuleCandidate } from './Module.struct'
-import { Type, Module } from 'helios-distribution-types'
+import { Type, Module } from 'hl-distribution-types-sir'
 import { Stats, mkdirs } from 'fs-extra'
 import { resolve } from 'path'
 import { MinecraftVersion } from '../../../util/MinecraftVersion'

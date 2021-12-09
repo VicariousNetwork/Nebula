@@ -1,5 +1,5 @@
 import { ModuleStructure } from './Module.struct'
-import { Type, TypeMetadata } from 'helios-distribution-types'
+import { Type, TypeMetadata } from 'hl-distribution-types-sir'
 import { Stats } from 'fs-extra'
 import { join } from 'path'
 import { URL } from 'url'

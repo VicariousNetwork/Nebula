@@ -1,4 +1,4 @@
-import { Distribution } from 'helios-distribution-types'
+import { Distribution } from 'hl-distribution-types-sir'
 
 export interface DistroMeta {
 
@@ -17,11 +17,11 @@ export function getDefaultDistroMeta(): DistroMeta {
     return {
 
         meta: {
-            rss: '<LINK TO RSS FEED>',
+            rss: 'https://news.vicariousnetwork.com/c/announcements/5.rss',
             discord: {
-                clientId: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                smallImageText: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                smallImageKey: '<FILL IN OR REMOVE DISCORD OBJECT>'
+                clientId: '851934070614655007',
+                smallImageText: 'Vicarious Network Launcher',
+                smallImageKey: 'icon'
             }
         }
         

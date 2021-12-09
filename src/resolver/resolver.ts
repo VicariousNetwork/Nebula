@@ -1,4 +1,4 @@
-import { Module } from 'helios-distribution-types'
+import { Module } from 'hl-distribution-types-sir'
 
 export interface Resolver {
 

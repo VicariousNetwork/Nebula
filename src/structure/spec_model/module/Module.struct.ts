@@ -1,7 +1,7 @@
 import minimatch from 'minimatch'
 import { createHash } from 'crypto'
 import { lstat, pathExists, readdir, readFile, Stats } from 'fs-extra'
-import { Artifact, Module, Type, TypeMetadata } from 'helios-distribution-types'
+import { Artifact, Module, Type, TypeMetadata } from 'hl-distribution-types-sir'
 import { resolve } from 'path'
 import { BaseModelStructure } from '../BaseModel.struct'
 import { LibraryType } from '../../../model/claritas/ClaritasLibraryType'

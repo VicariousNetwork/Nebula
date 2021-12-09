@@ -1,4 +1,4 @@
-import { Server } from 'helios-distribution-types'
+import { Server } from 'hl-distribution-types-sir'
 
 export interface UntrackedFilesOption {
     /**
@@ -24,13 +24,15 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             version: '1.0.0',
             name: `${id} (Minecraft ${version})`,
             description: `${id} Running Minecraft ${version}`,
+            icon: 'https://launcher.vicariousnetwork.com/repo/icons/CHANGE_ME.png',
             address: 'localhost:25565',
             discord: {
-                shortId: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageText: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageKey: '<FILL IN OR REMOVE DISCORD OBJECT>'
+                shortId: '<PETER INSERT A MODPACK NAME HERE>',
+                largeImageText: 'CHANGE_ME.vicariousnetwork.com',
+                largeImageKey: 'CHANGE_ME'
             },
             mainServer: false,
+            serverCode: '',
             autoconnect: false
         }
     }
@@ -64,9 +66,11 @@ export interface ServerMeta {
         version: Server['version']
         name: Server['name']
         description: Server['description']
+        icon: Server['icon']
         address: Server['address']
         discord?: Server['discord']
         mainServer: Server['mainServer']
+        serverCode: ''
         autoconnect: Server['autoconnect']
     }
 

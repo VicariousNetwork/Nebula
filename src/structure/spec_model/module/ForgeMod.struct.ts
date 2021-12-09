@@ -1,5 +1,5 @@
 import { Stats } from 'fs-extra'
-import { Type, Module } from 'helios-distribution-types'
+import { Type, Module } from 'hl-distribution-types-sir'
 import { join } from 'path'
 import { URL } from 'url'
 import { VersionSegmented } from '../../../util/VersionSegmented'

@@ -1,6 +1,6 @@
 import { createHash } from 'crypto'
 import { copy, lstat, mkdirs, pathExists, readFile, remove } from 'fs-extra'
-import { Module, Type } from 'helios-distribution-types'
+import { Module, Type } from 'hl-distribution-types-sir'
 import { basename, join } from 'path'
 import { VersionManifestFG2 } from '../../../model/forge/VersionManifestFG2'
 import { LibRepoStructure } from '../../../structure/repo/LibRepo.struct'
