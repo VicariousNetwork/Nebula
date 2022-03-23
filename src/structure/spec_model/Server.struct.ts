@@ -6,7 +6,6 @@ import { VersionSegmentedRegistry } from '../../util/VersionSegmentedRegistry'
 import { ServerMeta, getDefaultServerMeta, ServerMetaOptions, UntrackedFilesOption } from '../../model/nebula/servermeta'
 import { BaseModelStructure } from './BaseModel.struct'
 import { MiscFileStructure } from './module/File.struct'
-import { LiteModStructure } from './module/LiteMod.struct'
 import { LibraryStructure } from './module/Library.struct'
 import { MinecraftVersion } from '../../util/MinecraftVersion'
 import { addSchemaToObject, SchemaTypes } from '../../util/SchemaUtil'
@@ -41,7 +40,6 @@ export class ServerStructure extends BaseModelStructure<Server> {
         minecraftVersion: MinecraftVersion,
         options: {
             forgeVersion?: string
-            liteloaderVersion?: string
         }
     ): Promise<void> {
         const effectiveId = `${id}-${minecraftVersion}`
@@ -70,12 +68,6 @@ export class ServerStructure extends BaseModelStructure<Server> {
             serverMetaOpts.forgeVersion = options.forgeVersion
         }
 
-        if (options.liteloaderVersion != null) {
-            const lms = new LiteModStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, [])
-            await lms.init()
-            serverMetaOpts.liteloaderVersion = options.liteloaderVersion
-        }
-
         const serverMeta: ServerMeta = addSchemaToObject(
             getDefaultServerMeta(id, minecraftVersion.toString(), serverMetaOpts),
             SchemaTypes.ServerMetaSchema,
@@ -99,6 +91,8 @@ export class ServerStructure extends BaseModelStructure<Server> {
             const absoluteServerRoot = resolvePath(this.containerDirectory, file)
             const relativeServerRoot = join(this.relativeRoot, file)
             if ((await lstat(absoluteServerRoot)).isDirectory()) {
+
+                this.logger.info(`Beginning processing of ${file}.`)
 
                 const match = this.ID_REGEX.exec(file)
                 if (match == null) {
@@ -140,13 +134,6 @@ export class ServerStructure extends BaseModelStructure<Server> {
 
                     const forgeModModules = await forgeModStruct.getSpecModel()
                     modules.push(...forgeModModules)
-                }
-
-                
-                if(serverMeta.liteloader) {
-                    const liteModStruct = new LiteModStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles)
-                    const liteModModules = await liteModStruct.getSpecModel()
-                    modules.push(...liteModModules)
                 }
 
                 const libraryStruct = new LibraryStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles)
